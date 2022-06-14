@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeUIController">
+   <children>
+      <Label layoutX="21.0" layoutY="15.0" text="Employee Name :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="175.0" layoutY="18.0" prefHeight="21.0" prefWidth="163.0" text="AThar Ali Siddiqui">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="408.0" layoutY="15.0" text="Contact No : ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="contactLabel" layoutX="518.0" layoutY="19.0" prefHeight="21.0" prefWidth="139.0" text="0333-21241423">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="15.0" layoutY="40.0" prefHeight="21.0" prefWidth="639.0" />
+      <Label layoutX="21.0" layoutY="62.0" text="Delivery Taken">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="14.0" layoutY="97.0" prefHeight="199.0" prefWidth="648.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="40.66665458679199" text="ID" />
+            <TableColumn fx:id="customerNameColumn" prefWidth="119.99999618530273" text="CUSTOMER NAME" />
+            <TableColumn fx:id="pickupAddColumn" prefWidth="195.0" text="PICKUP ADDRESS" />
+            <TableColumn fx:id="deliveryAddColumn" prefWidth="195.0" text="DELIVERY ADDRESS" />
+            <TableColumn fx:id="pickupDateColumn" prefWidth="95.33331298828125" text="PICKUP DATE" />
+         </columns>
+      </TableView>
+      <Separator layoutX="18.0" layoutY="296.0" prefHeight="21.0" prefWidth="639.0" />
+      <Label layoutX="31.0" layoutY="364.0" text="Order ID" />
+      <Label layoutX="22.0" layoutY="317.0" text="Place Order To Delivery">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="orderIdText" layoutX="94.0" layoutY="360.0" prefHeight="25.0" prefWidth="126.0" />
+      <ComboBox fx:id="deliveryManCombo" layoutX="240.0" layoutY="360.0" prefHeight="25.0" prefWidth="209.0" promptText="Select Delivery Man" />
+      <Button layoutX="472.0" layoutY="360.0" mnemonicParsing="false" onAction="#enterAction" prefHeight="25.0" prefWidth="181.0" text="Enter" />
+      <Label fx:id="deliveryManNameLabel" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="397.0" prefHeight="17.0" prefWidth="260.0" textAlignment="RIGHT" textFill="#0522ff">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

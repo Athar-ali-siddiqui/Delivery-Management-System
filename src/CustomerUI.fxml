@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerUIController">
+   <children>
+      <Label layoutX="17.0" layoutY="14.0" text="Customer Name :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="397.0" layoutY="14.0" text="Contact No : ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="170.0" layoutY="17.0" prefHeight="21.0" prefWidth="163.0" text="AThar Ali Siddiqui">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="contactLabel" layoutX="507.0" layoutY="18.0" prefHeight="21.0" prefWidth="157.0" text="0333-21241423">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="12.0" layoutY="37.0" prefHeight="21.0" prefWidth="656.0" />
+      <Label layoutX="17.0" layoutY="87.0" text="Pickup Address" />
+      <Label layoutX="17.0" layoutY="52.0" text="Place Order">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="122.0" text="Delivery Address" />
+      <TextField fx:id="pickupAddText" layoutX="111.0" layoutY="83.0" prefWidth="260.0" />
+      <TextField fx:id="deliveryAddText" layoutX="111.0" layoutY="116.0" prefWidth="260.0" />
+      <Label layoutX="394.0" layoutY="87.0" prefHeight="17.0" prefWidth="81.0" text="Pickup Date" />
+      <DatePicker fx:id="pickupDateText" layoutX="469.0" layoutY="83.0" prefHeight="25.0" prefWidth="191.0" />
+      <Button layoutX="549.0" layoutY="118.0" mnemonicParsing="false" onAction="#placeOrderAction" prefHeight="25.0" prefWidth="111.0" text="Place Order" />
+      <Separator layoutX="11.0" layoutY="146.0" prefHeight="21.0" prefWidth="656.0" />
+      <Label fx:id="orderValidationLabel" layoutX="393.0" layoutY="117.0" prefHeight="27.0" prefWidth="147.0">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ogTable" layoutX="13.0" layoutY="194.0" prefHeight="150.0" prefWidth="660.0">
+        <columns>
+          <TableColumn fx:id="ogIdColumn" prefWidth="30.00003147125244" text="ID" />
+          <TableColumn fx:id="ogPickupAddColumn" prefWidth="160.0" text="PICKUP ADDRESS" />
+            <TableColumn fx:id="ogDeliveryAddColumn" prefWidth="160.0" text="DELIVERY ADDRESS" />
+            <TableColumn fx:id="ogPickupDateColumn" prefWidth="97.33331298828125" text="PICKUP DATE" />
+            <TableColumn fx:id="ogStatusColumn" prefWidth="61.333404541015625" text="STATUS" />
+            <TableColumn fx:id="ogTakenByColumn" prefWidth="148.6666259765625" text="TAKEN BY (EMP)" />
+        </columns>
+      </TableView>
+      <Label layoutX="17.0" layoutY="165.0" text="Ongoing Delivery">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="350.0" prefHeight="21.0" prefWidth="671.0" />
+      <Label layoutX="16.0" layoutY="368.0" text="Completed Delivery">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="cdTable" layoutX="13.0" layoutY="396.0" prefHeight="150.0" prefWidth="660.0">
+         <columns>
+            <TableColumn fx:id="cdIdColumn" prefWidth="30.00003147125244" text="ID" />
+            <TableColumn fx:id="cdPickupAddColumn" prefWidth="128.0" text="PICKUP ADDRESS" />
+            <TableColumn fx:id="cdDeliveryAddColumn" prefWidth="128.0" text="DELIVERY ADDRESS" />
+            <TableColumn fx:id="cdPickupDateColumn" prefWidth="80.66668701171875" text="PICKUP DATE" />
+            <TableColumn fx:id="deliveryDateColumn" prefWidth="93.0" text="DELIVERY DATE" />
+            <TableColumn fx:id="cdEmpNameColumn" prefWidth="99.99996948242188" text="EMPLOYEE " />
+            <TableColumn fx:id="cdDmNameColumn" prefWidth="99.99996948242188" text="DELIVERY MAN" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
